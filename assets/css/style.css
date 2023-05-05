@@ -7124,7 +7124,12 @@ label {
   height: 100%;
   width: 100%;
   border-radius: inherit;
+  /* filter: grayscale(100%);
+  transition: filter 0.3s ease; */
 }
+/* .cs-portfolio.cs-style1 .cs-portfolio_bg:hover {
+  filter: grayscale(0%);
+} */
 
 .cs-portfolio.cs-style1 .cs-portfolio_info {
   height: 300px;
@@ -7240,6 +7245,9 @@ label {
     rgba(0, 0, 0, 0.8) 100%
   );
 }
+.cs-portfolio.cs-style1.cs-type2 .cs-portfolio_hover {
+  filter: grayscale(0%);
+}
 
 .cs-portfolio.cs-style1.cs-type2 .cs-portfolio_info_bg {
   display: none;
@@ -7266,6 +7274,7 @@ label {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
+  /* filter: grayscale(100%); */
 }
 
 .cs-portfolio.cs-style1.cs-lightbox_item:hover {
