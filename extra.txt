@@ -323,3 +323,88 @@
       </div>
     </footer>
     <!-- End Footer -->
+
+
+
+            <!--------------------------- constact form functionality  -------------------------------->
+        <div class="col-lg-6">
+          <form
+            id="cs-form"
+            method="POST"
+            name="contactform"
+            id="contactform"
+            class="row"
+          >
+            <div class="col-sm-6">
+              <label class="cs-primary_color">Full Name*</label>
+              <input
+                type="text"
+                class="cs-form_field"
+                name="full-name"
+                required
+              />
+              <div class="cs-height_20 cs-height_lg_20"></div>
+            </div>
+            <div class="col-sm-6">
+              <label class="cs-primary_color">Email*</label>
+              <input type="email" class="cs-form_field" name="email" required />
+              <div class="cs-height_20 cs-height_lg_20"></div>
+            </div>
+            <div class="col-sm-6">
+              <label class="cs-primary_color">Project Type*</label>
+              <input
+                type="text"
+                class="cs-form_field"
+                name="project"
+                required
+              />
+              <div class="cs-height_20 cs-height_lg_20"></div>
+            </div>
+            <div class="col-sm-6">
+              <label class="cs-primary_color">Mobile*</label>
+              <input
+                type="number"
+                class="cs-form_field"
+                name="number"
+                required
+              />
+              <div class="cs-height_20 cs-height_lg_20"></div>
+            </div>
+            <div class="col-lg-12">
+              <label class="cs-primary_color">Write Your Message*</label>
+              <textarea
+                cols="30"
+                rows="7"
+                class="cs-form_field"
+                name="message"
+                required
+              ></textarea>
+              <div class="cs-height_25 cs-height_lg_25"></div>
+            </div>
+            <div class="col-lg-12">
+              <button
+                onclick="submitFunction()"
+                class="cs-btn cs-style1"
+                type="submit"
+                name="submit"
+                value="submit"
+                id="submit"
+              >
+                Send Message
+              </button>
+              <!-- <input
+                type="submit"
+                value="Submit"
+                name="submit"
+                onclick="submitFunction()"
+                style="
+                  background-color: #fed700;
+                  color: black;
+                  padding: 10px;
+                  border-radius: 10px;
+                "
+              /> -->
+            </div>
+          </form>
+          <!--------------------------- constact form functionality  -------------------------------->
+        </div>
