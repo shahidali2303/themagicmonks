@@ -7,9 +7,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Laralink" />
     <!-- Favicon Icon -->
-    <link rel="icon" href="assets/img/logo/favicon.png" />
+    <!-- <link rel="icon" href="assets/img/logo/favicon.png" /> -->
     <!-- Site Title -->
-    <title>About Us</title>
+    <link
+      id="favicon"
+      type="image/png"
+      rel="icon"
+      href="assets/img/logo/favicon.png"
+    />
+    <script>
+      // Function to change the favicon
+      function changeFavicon() {
+        var favicon = document.getElementById("favicon");
+        favicon.href = "assets/img/logo/favicon-2.png";
+      }
+
+      // Event listener for page visibility change
+      document.addEventListener("visibilitychange", function () {
+        if (document.hidden) {
+          changeFavicon(); // Change favicon when page is hidden
+        } else {
+          // Set the favicon back to the default when page becomes visible again
+          var favicon = document.getElementById("favicon");
+          favicon.href = "assets/img/logo/favicon.png";
+        }
+      });
+    </script>
+    <title>About Us | TheMagicMonks</title>
+    <script>
+      function updateTitle() {
+        if (document.hidden) {
+          document.title = "Missing you already";
+        } else {
+          document.title = "About Us | TheMagicMonks";
+        }
+      }
+
+      document.addEventListener("visibilitychange", updateTitle);
+    </script>
     <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/plugins/lightgallery.min.css" />
     <link rel="stylesheet" href="assets/css/plugins/slick.css" />
@@ -39,7 +74,7 @@
             <div class="cs-main_header_center">
               <div class="cs-nav cs-primary_font cs-medium">
                 <ul class="cs-nav_list">
-                  <li><a href="index.html">Home</a></li>
+                  <!-- <li><a href="index.html">Home</a></li> -->
                   <li><a href="about.html">About</a></li>
                   <li><a href="service.html">Services</a></li>
                   <li><a href="#">Work</a></li>
