@@ -7,9 +7,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Laralink" />
     <!-- Favicon Icon -->
-    <link rel="icon" href="assets/img/logo/favicon.png" />
+    <link
+      id="favicon"
+      type="image/png"
+      rel="icon"
+      href="assets/img/logo/favicon.png"
+    />
+    <script>
+      // Function to change the favicon
+      function changeFavicon() {
+        var favicon = document.getElementById("favicon");
+        favicon.href = "assets/img/logo/favicon-2.png";
+      }
+
+      // Event listener for page visibility change
+      document.addEventListener("visibilitychange", function () {
+        if (document.hidden) {
+          changeFavicon(); // Change favicon when page is hidden
+        } else {
+          // Set the favicon back to the default when page becomes visible again
+          var favicon = document.getElementById("favicon");
+          favicon.href = "assets/img/logo/favicon.png";
+        }
+      });
+    </script>
     <!-- Site Title -->
-    <title>Contact Us</title>
+    <title>Contact | TheMagicMonks</title>
+    <script>
+      function updateTitle() {
+        if (document.hidden) {
+          document.title = "Missing you already";
+        } else {
+          document.title = "Contact | TheMagicMonks";
+        }
+      }
+
+      document.addEventListener("visibilitychange", updateTitle);
+    </script>
     <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/plugins/lightgallery.min.css" />
     <link rel="stylesheet" href="assets/css/plugins/slick.css" />
@@ -40,22 +74,22 @@
             <div class="cs-main_header_center">
               <div class="cs-nav cs-primary_font cs-medium">
                 <ul class="cs-nav_list">
-                  <li><a href="index.html">Home</a></li>
+                  <!-- <li><a href="index.html">Home</a></li> -->
                   <li><a href="about.html">About</a></li>
                   <li><a href="service.html">Services</a></li>
-                  <li><a href="#">Work</a></li>
+                  <li><a href="our-work.html">Work</a></li>
                   <li><a href="team.html">Team</a></li>
                   <li><a href="contact.html">Contact</a></li>
 
                   <!-- <li class="menu-item-has-children">
-                    <a href="service.html">Services</a>
-                    <ul>
-                      <li><a href="service.html">Services</a></li>
-                      <li>
-                        <a href="service-details.html">Service Details</a>
-                      </li>
-                    </ul>
-                  </li> -->
+                        <a href="service.html">Services</a>
+                        <ul>
+                          <li><a href="service.html">Services</a></li>
+                          <li>
+                            <a href="service-details.html">Service Details</a>
+                          </li>
+                        </ul>
+                      </li> -->
                 </ul>
               </div>
             </div>
@@ -327,9 +361,9 @@
                     alt="Logo"
                   />
                   <!-- <p>
-                    Welcome to arino sed ut perspiciae omunde omnis iste natus
-                    error sitort voluptatem accusantium.
-                  </p> -->
+                        Welcome to arino sed ut perspiciae omunde omnis iste natus
+                        error sitort voluptatem accusantium.
+                      </p> -->
                 </div>
                 <div class="cs-social_btns cs-style1">
                   <a
@@ -366,36 +400,40 @@
                         d="M11.4651 2.95396C11.4731 3.065 11.4731 3.17606 11.4731 3.2871C11.4731 6.67383 8.89535 10.5761 4.18402 10.5761C2.73255 10.5761 1.38421 10.1557 0.25 9.42608C0.456226 9.44986 0.654494 9.4578 0.868655 9.4578C2.06629 9.4578 3.16879 9.0533 4.04918 8.36326C2.92291 8.33946 1.97906 7.60183 1.65386 6.5866C1.81251 6.61038 1.97112 6.62624 2.1377 6.62624C2.36771 6.62624 2.59774 6.59451 2.81188 6.53901C1.63802 6.30105 0.757595 5.26996 0.757595 4.02472V3.99301C1.09864 4.18336 1.49524 4.30233 1.91558 4.31818C1.22554 3.85814 0.773464 3.07294 0.773464 2.1846C0.773464 1.70872 0.900344 1.27249 1.12244 0.891774C2.38355 2.44635 4.27919 3.46156 6.40481 3.57262C6.36516 3.38226 6.34136 3.184 6.34136 2.9857C6.34136 1.57388 7.4835 0.423828 8.90323 0.423828C9.64086 0.423828 10.3071 0.733156 10.7751 1.23284C11.354 1.1218 11.9093 0.907643 12.401 0.614185C12.2106 1.20906 11.8061 1.70875 11.2748 2.02598C11.7903 1.97049 12.29 1.82769 12.75 1.62942C12.4011 2.13702 11.9648 2.5891 11.4651 2.95396V2.95396Z"
                         fill="white"
                       />
+                      <!-- <path
+                            d="M12.875 2H3.125C1.88542 2 1 2.88542 1 4.125V13.875C1 15.1146 1.88542 16 3.125 16H12.875C14.1146 16 15 15.1146 15 13.875V4.125C15 2.88542 14.1146 2 12.875 2ZM8 12C10.2091 12 12 10.2091 12 8C12 5.79086 10.2091 4 8 4C5.79086 4 4 5.79086 4 8C4 10.2091 5.79086 12 8 12ZM14 4.725V5.25C14 5.66357 13.6636 6 13.25 6H12.725C12.3161 6 12 5.68393 12 5.275V4.725C12 4.31143 12.3364 3.975 12.75 3.975H13.275C13.6839 3.975 14 4.29107 14 4.7Z"
+                            fill="white"
+                          /> -->
                     </svg>
                   </a>
                   <!-- <a href="#" class="cs-center" target="_blank">
-                    <svg
-                      width="10"
-                      height="20"
-                      viewBox="0 0 13 9"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M15.5625 0H0.4375C0.195312 0 0 0.195312 0 0.4375V15.5625C0 15.8047 0.195312 16 0.4375 16H8.54688V9.8125H6.52344V7.40625H8.54688V5.77344C8.54688 3.25391 9.96484 1.83594 12.3945 1.83594C13.3086 1.83594 14.2578 1.89062 14.375 1.89844V4.23438L12.9531 4.23438C11.8203 4.23438 11.5234 4.88281 11.5234 5.67188V7.40625H14.2969L13.9141 9.8125H11.5234V16H15.5625C15.8047 16 16 15.8047 16 15.5625V0.4375C16 0.195312 15.8047 0 15.5625 0Z"
-                        fill="white"
-                      />
-                    </svg>
-                  </a>
-                  <a href="#" class="cs-center" target="_blank">
-                    <svg
-                      width="13"
-                      height="13"
-                      viewBox="0 0 13 13"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M2.87612 8.149C2.87612 8.87165 2.28571 9.46205 1.56306 9.46205C0.840402 9.46205 0.25 8.87165 0.25 8.149C0.25 7.42634 0.840402 6.83594 1.56306 6.83594H2.87612V8.149ZM3.53795 8.149C3.53795 7.42634 4.12835 6.83594 4.851 6.83594C5.57366 6.83594 6.16406 7.42634 6.16406 8.149V11.4369C6.16406 12.1596 5.57366 12.75 4.851 12.75C4.12835 12.75 3.53795 12.1596 3.53795 11.4369V8.149ZM4.851 2.87612C4.12835 2.87612 3.53795 2.28571 3.53795 1.56306C3.53795 0.840402 4.12835 0.25 4.851 0.25C5.57366 0.25 6.16406 0.840402 6.16406 1.56306V2.87612H4.851V2.87612ZM4.851 3.53795C5.57366 3.53795 6.16406 4.12835 6.16406 4.851C6.16406 5.57366 5.57366 6.16406 4.851 6.16406H1.56306C0.840402 6.16406 0.25 5.57366 0.25 4.851C0.25 4.12835 0.840402 3.53795 1.56306 3.53795H4.851V3.53795ZM10.1239 4.851C10.1239 4.12835 10.7143 3.53795 11.4369 3.53795C12.1596 3.53795 12.75 4.12835 12.75 4.851C12.75 5.57366 12.1596 6.16406 11.4369 6.16406H10.1239V4.851V4.851ZM9.46205 4.851C9.46205 5.57366 8.87165 6.16406 8.149 6.16406C7.42634 6.16406 6.83594 5.57366 6.83594 4.851V1.56306C6.83594 0.840402 7.42634 0.25 8.149 0.25C8.87165 0.25 9.46205 0.840402 9.46205 1.56306V4.851V4.851ZM8.149 10.1239C8.87165 10.1239 9.46205 10.7143 9.46205 11.4369C9.46205 12.1596 8.87165 12.75 8.149 12.75C7.42634 12.75 6.83594 12.1596 6.83594 11.4369V10.1239H8.149ZM8.149 9.46205C7.42634 9.46205 6.83594 8.87165 6.83594 8.149C6.83594 7.42634 7.42634 6.83594 8.149 6.83594H11.4369C12.1596 6.83594 12.75 7.42634 12.75 8.149C12.75 8.87165 12.1596 9.46205 11.4369 9.46205H8.149Z"
-                        fill="white"
-                      />
-                    </svg>
-                  </a> -->
+                        <svg
+                          width="10"
+                          height="20"
+                          viewBox="0 0 13 9"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M15.5625 0H0.4375C0.195312 0 0 0.195312 0 0.4375V15.5625C0 15.8047 0.195312 16 0.4375 16H8.54688V9.8125H6.52344V7.40625H8.54688V5.77344C8.54688 3.25391 9.96484 1.83594 12.3945 1.83594C13.3086 1.83594 14.2578 1.89062 14.375 1.89844V4.23438L12.9531 4.23438C11.8203 4.23438 11.5234 4.88281 11.5234 5.67188V7.40625H14.2969L13.9141 9.8125H11.5234V16H15.5625C15.8047 16 16 15.8047 16 15.5625V0.4375C16 0.195312 15.8047 0 15.5625 0Z"
+                            fill="white"
+                          />
+                        </svg>
+                      </a>
+                      <a href="#" class="cs-center" target="_blank">
+                        <svg
+                          width="13"
+                          height="13"
+                          viewBox="0 0 13 13"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M2.87612 8.149C2.87612 8.87165 2.28571 9.46205 1.56306 9.46205C0.840402 9.46205 0.25 8.87165 0.25 8.149C0.25 7.42634 0.840402 6.83594 1.56306 6.83594H2.87612V8.149ZM3.53795 8.149C3.53795 7.42634 4.12835 6.83594 4.851 6.83594C5.57366 6.83594 6.16406 7.42634 6.16406 8.149V11.4369C6.16406 12.1596 5.57366 12.75 4.851 12.75C4.12835 12.75 3.53795 12.1596 3.53795 11.4369V8.149ZM4.851 2.87612C4.12835 2.87612 3.53795 2.28571 3.53795 1.56306C3.53795 0.840402 4.12835 0.25 4.851 0.25C5.57366 0.25 6.16406 0.840402 6.16406 1.56306V2.87612H4.851V2.87612ZM4.851 3.53795C5.57366 3.53795 6.16406 4.12835 6.16406 4.851C6.16406 5.57366 5.57366 6.16406 4.851 6.16406H1.56306C0.840402 6.16406 0.25 5.57366 0.25 4.851C0.25 4.12835 0.840402 3.53795 1.56306 3.53795H4.851V3.53795ZM10.1239 4.851C10.1239 4.12835 10.7143 3.53795 11.4369 3.53795C12.1596 3.53795 12.75 4.12835 12.75 4.851C12.75 5.57366 12.1596 6.16406 11.4369 6.16406H10.1239V4.851V4.851ZM9.46205 4.851C9.46205 5.57366 8.87165 6.16406 8.149 6.16406C7.42634 6.16406 6.83594 5.57366 6.83594 4.851V1.56306C6.83594 0.840402 7.42634 0.25 8.149 0.25C8.87165 0.25 9.46205 0.840402 9.46205 1.56306V4.851V4.851ZM8.149 10.1239C8.87165 10.1239 9.46205 10.7143 9.46205 11.4369C9.46205 12.1596 8.87165 12.75 8.149 12.75C7.42634 12.75 6.83594 12.1596 6.83594 11.4369V10.1239H8.149ZM8.149 9.46205C7.42634 9.46205 6.83594 8.87165 6.83594 8.149C6.83594 7.42634 7.42634 6.83594 8.149 6.83594H11.4369C12.1596 6.83594 12.75 7.42634 12.75 8.149C12.75 8.87165 12.1596 9.46205 11.4369 9.46205H8.149Z"
+                            fill="white"
+                          />
+                        </svg>
+                      </a> -->
                 </div>
               </div>
             </div>
@@ -403,10 +441,10 @@
               <div class="cs-footer_item">
                 <h2 class="cs-widget_title">Services</h2>
                 <ul class="cs-menu_widget cs-mp0">
-                  <li><a href="#">UI/UX design</a></li>
-                  <li><a href="#">WP development</a></li>
-                  <li><a href="#">Digital marketing</a></li>
-                  <li><a href="#">React development</a></li>
+                  <li><a href="#">Digital PR</a></li>
+                  <li><a href="#">Graphics Designing</a></li>
+                  <li><a href="#">Content Writing</a></li>
+                  <li><a href="#">Video Editing</a></li>
                 </ul>
               </div>
             </div>
@@ -415,10 +453,10 @@
               <div class="cs-footer_item">
                 <h2 class="cs-widget_title">Links</h2>
                 <ul class="cs-menu_widget cs-mp0">
-                  <li><a href="#">What We Are</a></li>
-                  <li><a href="#">What We Do</a></li>
-                  <li><a href="#">Our Team</a></li>
-                  <li><a href="#">See Our Work</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="service.html">Services</a></li>
+                  <li><a href="#">Work</a></li>
+                  <li><a href="team.html">Team</a></li>
                 </ul>
               </div>
             </div>
@@ -471,23 +509,6 @@
         />
       </svg>
     </span>
-
-    <!-- Start Video Popup -->
-    <div class="cs-video_popup">
-      <div class="cs-video_popup_overlay"></div>
-      <div class="cs-video_popup_content">
-        <div class="cs-video_popup_layer"></div>
-        <div class="cs-video_popup_container">
-          <div class="cs-video_popup_align">
-            <div class="embed-responsive embed-responsive-16by9">
-              <iframe class="embed-responsive-item" src="about:blank"></iframe>
-            </div>
-          </div>
-          <div class="cs-video_popup_close"></div>
-        </div>
-      </div>
-    </div>
-    <!-- End Video Popup -->
 
     <!-- Script -->
     <script src="assets/js/plugins/jquery-3.6.0.min.js"></script>

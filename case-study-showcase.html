@@ -7,9 +7,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Laralink" />
     <!-- Favicon Icon -->
-    <link rel="icon" href="assets/img/favicon.png" />
+    <link
+      id="favicon"
+      type="image/png"
+      rel="icon"
+      href="assets/img/logo/favicon.png"
+    />
+    <script>
+      // Function to change the favicon
+      function changeFavicon() {
+        var favicon = document.getElementById("favicon");
+        favicon.href = "assets/img/logo/favicon-2.png";
+      }
+
+      // Event listener for page visibility change
+      document.addEventListener("visibilitychange", function () {
+        if (document.hidden) {
+          changeFavicon(); // Change favicon when page is hidden
+        } else {
+          // Set the favicon back to the default when page becomes visible again
+          var favicon = document.getElementById("favicon");
+          favicon.href = "assets/img/logo/favicon.png";
+        }
+      });
+    </script>
     <!-- Site Title -->
-    <title>Arino - Creative Agency Template</title>
+    <title>Case Study | TheMagicMonks</title>
+    <script>
+      // Function to update the title
+      function updateTitle() {
+        if (document.hidden) {
+          document.title = "Missing you already";
+        } else {
+          document.title = "Case Study | TheMagicMonks";
+        }
+      }
+
+      // Event listener for page visibility change
+      document.addEventListener("visibilitychange", updateTitle);
+    </script>
     <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/plugins/lightgallery.min.css" />
     <link rel="stylesheet" href="assets/css/plugins/slick.css" />
@@ -29,11 +65,11 @@
         <div class="container">
           <div class="cs-main_header_in">
             <div class="cs-main_header_left">
-              <a class="cs-site_branding" href="#">
+              <a class="cs-site_branding" href="index.html">
                 <img
                   src="assets/img/logo/brand-logo.png"
-                  width="150"
-                  height="150"
+                  width="80"
+                  height="50"
                   alt="Logo"
                 />
               </a>
@@ -41,22 +77,22 @@
             <div class="cs-main_header_center">
               <div class="cs-nav cs-primary_font cs-medium">
                 <ul class="cs-nav_list">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Services</a></li>
-                  <li><a href="#">Work</a></li>
-                  <li><a href="#">Team</a></li>
-                  <li><a href="#">Contact</a></li>
+                  <!-- <li><a href="index.html">Home</a></li> -->
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="service.html">Services</a></li>
+                  <li><a href="our-work.html">Work</a></li>
+                  <li><a href="team.html">Team</a></li>
+                  <li><a href="contact.html">Contact</a></li>
 
                   <!-- <li class="menu-item-has-children">
-                  <a href="service.html">Services</a>
-                  <ul>
-                    <li><a href="service.html">Services</a></li>
-                    <li>
-                      <a href="service-details.html">Service Details</a>
-                    </li>
-                  </ul>
-                </li> -->
+                        <a href="service.html">Services</a>
+                        <ul>
+                          <li><a href="service.html">Services</a></li>
+                          <li>
+                            <a href="service-details.html">Service Details</a>
+                          </li>
+                        </ul>
+                      </li> -->
                 </ul>
               </div>
             </div>
@@ -76,6 +112,7 @@
         </div>
       </div>
     </header>
+    <!------------------------------------ hamburger menu start ----------------------------------->
     <div class="cs-side_header">
       <button class="cs-close"></button>
       <div class="cs-side_header_overlay"></div>
@@ -111,7 +148,7 @@
                   fill="#FED700"
                 />
               </svg>
-              <span>+44 454 7800 112</span>
+              <a href="tel:919599691289"><span>+91-9599691289</span></a>
             </li>
             <li>
               <svg
@@ -126,7 +163,9 @@
                   fill="#FED700"
                 />
               </svg>
-              <span>infotech@arino.com</span>
+              <a href="mailto:hello@themagicmonks.com"
+                ><span>hello@themagicmonks.com</span></a
+              >
             </li>
             <li>
               <svg
@@ -141,12 +180,12 @@
                   fill="#FED700"
                 />
               </svg>
-              <span>50 Wall Street Suite, 44150 <br />Ohio, United States</span>
+              <span>Gurugram, Haryana 122001 <br /></span>
             </li>
           </ul>
         </div>
 
-        <div class="cs-side_header_box">
+        <!-- <div class="cs-side_header_box">
           <div class="cs-social_btns cs-style1">
             <a href="#" class="cs-center">
               <svg
@@ -205,18 +244,24 @@
               </svg>
             </a>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
+    <!------------------------------------ hamburger menu end ----------------------------------->
     <!-- End Header Section -->
 
     <!-- Start Hero -->
     <div class="cs-fullscreen_swiper_wrap">
       <div class="cs-hero_social_wrap cs-primary_font cs-primary_color">
-        <div class="cs-hero_social_title">Follow Us</div>
         <ul class="cs-hero_social_links">
-          <li><a href="#">Behance</a></li>
-          <li><a href="#">Twitter</a></li>
+          <li>
+            <a href="https://www.instagram.com/themagicmonks">Instagram</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/the-magic-monks"
+              >LinkedIn</a
+            >
+          </li>
         </ul>
       </div>
       <div class="swiper cs-fullscreen_swiper_slider">
@@ -357,23 +402,6 @@
       </div>
     </div>
     <!-- End Hero -->
-
-    <!-- Start Video Popup -->
-    <div class="cs-video_popup">
-      <div class="cs-video_popup_overlay"></div>
-      <div class="cs-video_popup_content">
-        <div class="cs-video_popup_layer"></div>
-        <div class="cs-video_popup_container">
-          <div class="cs-video_popup_align">
-            <div class="embed-responsive embed-responsive-16by9">
-              <iframe class="embed-responsive-item" src="about:blank"></iframe>
-            </div>
-          </div>
-          <div class="cs-video_popup_close"></div>
-        </div>
-      </div>
-    </div>
-    <!-- End Video Popup -->
 
     <!-- Script -->
     <script src="assets/js/plugins/jquery-3.6.0.min.js"></script>
