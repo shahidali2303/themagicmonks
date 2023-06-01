@@ -1603,7 +1603,7 @@
                 <ul class="cs-menu_widget cs-mp0">
                   <li><a href="about.html">About</a></li>
                   <li><a href="service.html">Services</a></li>
-                  <li><a href="#">Work</a></li>
+                  <li><a href="our-work.html">Work</a></li>
                   <li><a href="team.html">Team</a></li>
                 </ul>
               </div>
@@ -1630,7 +1630,13 @@
       <div class="container">
         <div class="cs-bottom_footer">
           <div class="cs-bottom_footer_left">
-            <div class="cs-copyright">Copyright © 2023 TheMagicMonks.</div>
+            <div class="cs-copyright">
+              Copyright © <span id="currentYear"></span> TheMagicMonks.
+              <script>
+                var year = new Date().getFullYear();
+                document.getElementById("currentYear").textContent = year;
+              </script>
+            </div>
           </div>
           <div class="cs-bottom_footer_right">
             <ul class="cs-footer_links cs-mp0">

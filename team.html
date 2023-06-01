@@ -566,7 +566,13 @@
       <div class="container">
         <div class="cs-bottom_footer">
           <div class="cs-bottom_footer_left">
-            <div class="cs-copyright">Copyright © 2023 TheMagicMonks.</div>
+            <div class="cs-copyright">
+              Copyright © <span id="currentYear"></span> TheMagicMonks.
+              <script>
+                var year = new Date().getFullYear();
+                document.getElementById("currentYear").textContent = year;
+              </script>
+            </div>
           </div>
           <div class="cs-bottom_footer_right">
             <ul class="cs-footer_links cs-mp0">

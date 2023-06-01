@@ -453,6 +453,18 @@
               style="background-color: white; border-radius: 20px"
             />
           </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 pt-4 pb-4">
+            <img
+              src="assets/img/new/clients/Street-Salon.png"
+              alt="Partner"
+              style="
+                background-color: white;
+                border-radius: 20px;
+                width: 200px;
+                height: 150px;
+              "
+            />
+          </div>
         </div>
       </div>
     </section>
@@ -629,7 +641,13 @@
       <div class="container">
         <div class="cs-bottom_footer">
           <div class="cs-bottom_footer_left">
-            <div class="cs-copyright">Copyright © 2023 TheMagicMonks.</div>
+            <div class="cs-copyright">
+              Copyright © <span id="currentYear"></span> TheMagicMonks.
+              <script>
+                var year = new Date().getFullYear();
+                document.getElementById("currentYear").textContent = year;
+              </script>
+            </div>
           </div>
           <div class="cs-bottom_footer_right">
             <ul class="cs-footer_links cs-mp0">
