@@ -1679,7 +1679,10 @@ label {
   font-size: 50px;
   margin-bottom: 0;
 }
-
+.cs-section_heading.cs-style1 .cs-section_newTitle {
+  /* font-size: 50px; */
+  margin-bottom: 0;
+}
 .cs-section_heading.cs-style1 .cs-separator {
   height: 2px;
   width: 50px;
@@ -8265,3 +8268,6 @@ label {
   }
 }
 /*# sourceMappingURL=style.css.map */
+.image-grayscale:hover {
+  filter: grayscale(0%);
+}
