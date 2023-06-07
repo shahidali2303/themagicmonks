@@ -1680,7 +1680,7 @@ label {
   margin-bottom: 0;
 }
 .cs-section_heading.cs-style1 .cs-section_newTitle {
-  /* font-size: 50px; */
+  /* font-size: 10px; */
   margin-bottom: 0;
 }
 .cs-section_heading.cs-style1 .cs-separator {
@@ -2150,7 +2150,7 @@ label {
   width: 100%;
   right: -60px;
   bottom: -60px;
-  background-color: #fed700;
+  background-color: #000;
   border-radius: inherit;
 }
 
@@ -5388,7 +5388,7 @@ label {
 .cs-hero.cs-style3 .cs-hero_title {
   font-size: 100px;
   font-weight: 700;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   line-height: 1.6em;
 }
 
@@ -8268,9 +8268,6 @@ label {
   }
 }
 /*# sourceMappingURL=style.css.map */
-.image-grayscale:hover {
-  filter: grayscale(0%);
-}
 
 .work-img {
   filter: grayscale(100%); /* Set the image to grayscale by default */
