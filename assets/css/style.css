@@ -8271,3 +8271,11 @@ label {
 .image-grayscale:hover {
   filter: grayscale(0%);
 }
+
+.work-img {
+  filter: grayscale(100%); /* Set the image to grayscale by default */
+  transition: filter 0.3s ease;
+}
+.work-img:hover {
+  filter: grayscale(0%);
+}
