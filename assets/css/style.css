@@ -8276,3 +8276,9 @@ label {
 .work-img:hover {
   filter: grayscale(0%);
 }
+.text-highlight {
+  background-color: #fed700;
+  color: black;
+  border-radius: 10px;
+  padding: 5px;
+}
