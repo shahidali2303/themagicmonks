@@ -50,6 +50,10 @@
     <link rel="stylesheet" href="assets/css/plugins/lightgallery.min.css" />
     <link rel="stylesheet" href="assets/css/plugins/animate.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
   </head>
 
   <body>
@@ -174,7 +178,7 @@
     <!-- End Header Section -->
 
     <!-- Start Hero -->
-    <!-- <div
+    <div
       class="cs-page_heading cs-style1 cs-center text-center cs-bg"
       data-src="assets/img/contact_hero_bg.jpeg"
     >
@@ -187,7 +191,7 @@
           </ol>
         </div>
       </div>
-    </div> -->
+    </div>
     <!-- End Hero -->
     <div class="cs-height_150 cs-height_lg_80"></div>
     <div class="container">
@@ -254,18 +258,22 @@
         <!--------------------------- constact form functionality  -------------------------------->
         <div class="col-lg-6">
           <form
-            id="cs-form"
-            method="POST"
-            name="contactform"
-            id="contactform"
-            class="row"
+            action="mail.php"
+            method="post"
+            autocomplete="off"
+            class="row contact-form"
           >
             <div class="col-sm-6">
               <label class="cs-primary_color">Full Name*</label>
+              <input type="text" class="cs-form_field" name="name" required />
+              <div class="cs-height_20 cs-height_lg_20"></div>
+            </div>
+            <div class="col-sm-6">
+              <label class="cs-primary_color">Organization/Company Name*</label>
               <input
                 type="text"
                 class="cs-form_field"
-                name="full-name"
+                name="companyName"
                 required
               />
               <div class="cs-height_20 cs-height_lg_20"></div>
@@ -276,30 +284,55 @@
               <div class="cs-height_20 cs-height_lg_20"></div>
             </div>
             <div class="col-sm-6">
-              <label class="cs-primary_color">Project Type*</label>
-              <input
-                type="text"
-                class="cs-form_field"
-                name="project"
-                required
-              />
-              <div class="cs-height_20 cs-height_lg_20"></div>
-            </div>
-            <div class="col-sm-6">
               <label class="cs-primary_color">Mobile*</label>
-              <input
-                type="number"
-                class="cs-form_field"
-                name="number"
-                required
-              />
+              <input type="text" class="cs-form_field" name="phone" required />
               <div class="cs-height_20 cs-height_lg_20"></div>
             </div>
+            <div class="col-sm-12">
+              <label class="cs-primary_color"
+                >What budget range are you considering?*</label
+              >
+              <select
+                name="projectType"
+                class="cs-form_field"
+                style="color: white; background-color: black"
+              >
+                <option value="option1">Select Service</option>
+                <option value="option2">Creative & Digital Strategy</option>
+                <option value="option3">Photo & Video Production</option>
+                <option value="option4">Mobile & Website</option>
+                <option value="option4">Influencer Marketing</option>
+                <option value="option4">Branding & Marketing</option>
+                <option value="option4">Content Writing</option>
+                <option value="option4">Digital PR</option>
+                <option value="option4">Media Buying: Digital Ads</option>
+                <option value="option4">Analytics & SEO</option>
+              </select>
+
+              <div class="cs-height_20 cs-height_lg_20"></div>
+            </div>
+            <div class="col-sm-12">
+              <label class="cs-primary_color"
+                >What is the budget you are looking?*</label
+              >
+              <select
+                name="projectType"
+                class="cs-form_field"
+                style="color: white; background-color: black"
+              >
+                <option value="option1">Select Pricing</option>
+                <option value="option2">50k - 1 Lakh</option>
+                <option value="option3">1 Lakh - 2 Lakh</option>
+                <option value="option4">2 Lakh - 3 Lakh</option>
+                <option value="option4">3 Lakh +</option>
+              </select>
+
+              <div class="cs-height_20 cs-height_lg_20"></div>
+            </div>
+
             <div class="col-lg-12">
               <label class="cs-primary_color">Write Your Message*</label>
               <textarea
-                cols="30"
-                rows="7"
                 class="cs-form_field"
                 name="message"
                 required
@@ -307,28 +340,17 @@
               <div class="cs-height_25 cs-height_lg_25"></div>
             </div>
             <div class="col-lg-12">
-              <button
-                onclick="submitFunction()"
-                class="cs-btn cs-style1"
+              <input
                 type="submit"
-                name="submit"
-                value="submit"
-                id="submit"
-              >
-                Send Message
-              </button>
-              <!-- <input
-                type="submit"
-                value="Submit"
-                name="submit"
-                onclick="submitFunction()"
+                value="Send Message"
                 style="
                   background-color: #fed700;
                   color: black;
-                  padding: 10px;
+                  padding: 10px 20px 10px 20px;
                   border-radius: 10px;
+                  font-weight: 600;
                 "
-              /> -->
+              />
             </div>
           </form>
           <!--------------------------- constact form functionality  -------------------------------->
