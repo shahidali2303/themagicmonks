@@ -7,7 +7,8 @@
     $message = $_POST["message"];
     $phone = $_POST["phone"];
     $projectType= $_POST["projectType"];
-    $companyName = $_POST["companyName"]
+    $companyName = $_POST["companyName"];
+    $priceRange = $_POST["priceRange"];
     
 
     // Additional headers
@@ -15,7 +16,7 @@
     "CC:shahididforfun@gmail.com";
  
     $txt =  "You have received an email from ".$name ."\r\nEmail:- " .$email ."\r\nMobile:- " .$phone ."
-        \r\nMessage: ". $message;
+        \r\nMessage: ". $message . "\r\n";
 
         if($email !=NULL){
             mail($to, $subject,$txt,$headers);
