@@ -1472,8 +1472,8 @@ label {
   -ms-flex-align: center;
   align-items: center;
   padding: 0 6px;
-  -webkit-animation: slide-left 10s linear infinite;
-  animation: slide-left 10s linear infinite;
+  -webkit-animation: slide-left 20s linear infinite;
+  animation: slide-left 20s linear infinite;
 }
 
 .cs-moving_text > * {
